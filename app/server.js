@@ -4,8 +4,6 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const path = require("path");
 
-
-
 const app = express();
 
 // db config
@@ -42,27 +40,14 @@ app.engine(
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views"));
 
+
 //Routes
-//const operationsRoutes = require("./routes/operation.routes")
-
-
  app.get("/", (req, res) => {
   res.render("balance", {
   });
 }); 
 require("./routes/operation.routes")(app);
 
-
-
-
-// Routes
-/*  app.get("/", (req, res) => {
-  //res.json({ message: "App is working. Check http://localhost:8080/api/operations" });
-  res.render("operations", {
-  });
-});
-require("./routes/operation.routes")(app);
- */
 
 // Set port, listen for requests
 const PORT = process.env.PORT || 8080;
