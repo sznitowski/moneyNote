@@ -1,0 +1,64 @@
+
+<!-- Input Balance -->
+<div class="row">
+<input type="search"  id="operation" name="operation" class="form-control" placeholder="Find operation"
+style="width: 400px;"/>
+   <button type="submit" id="btnFindOperation" '({{this.concept}})"' style="width: 15%">Find</button>
+</div>
+
+<!-- Table list -->
+<table class="table table-striped table-xl text-dark table-bordered" style="margin-top: 20px;">
+     <thead class="thead-body bg-light text-dark">
+     <tr>
+        <td>Concept</td>
+        <td>Amount</td>
+        <td>Type</td>
+        <td>Date</td>
+      </tr>
+     </thead>
+    <tbody>
+   {{#each users}}
+	    <td> {{this.concept}} </td>
+	    <td> {{this.amount}} </td>
+      <td> {{this.type}} </td>
+	    <td> {{this.date}}</td>
+
+      <td class="td-actions" style="display:flex;">
+      </td>
+      </tr>
+    {{/each}}
+    </tbody>
+ </table>
+
+ 
+<script>
+  const modal = document.getElementById("confirmation-modal");
+  const btnFindOperation = document.getElementById("btnFindOperation");
+  const inputOperation = document.getElementById("operation");
+  
+  let idToBeDeleted = "";
+  btnFindOperation.addEventListener("click", function () {
+    inputOperation.value
+    window.location.href = `/api/operations?balance=${inputOperation.value}`
+  });
+  
+  function createOperation() {
+    window.location.href = '/api/showCreate';
+  }
+  function findAllOperation(id) {
+    window.location.href = `/api/detail?id=${id}`;
+  }
+  function deleteOperation(id, concept, amount, type) {
+    const modalDetail = document.getElementById("confirmation-modal-detail");
+    modalDetail.textContent = `delete operation "${concept}" de ${amount}.`
+    idToBeDeleted = id;
+    modal.style.visibility = "visible";
+  }
+  function modalCancel() {
+    modal.style.visibility = "hidden";
+    idToBeDeleted = "";
+  }
+  function modalAccept() {
+    window.location.href = `/api/delete?id=${idToBeDeleted}`;
+  }
+</script>

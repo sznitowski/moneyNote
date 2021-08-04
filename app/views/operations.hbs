@@ -1,0 +1,69 @@
+<form class="user-form" action="/registOperation" method="POST">
+ <div class ="input-container">
+
+      <input type="text" id="inputConcept" name="inputConcept" placeholder="concept"/>
+      </div>
+
+      <div class ="input-container">
+       <input type="number" id="inputAmount" name="inputAmount" placeholder="amount"/>
+      </div>
+
+       <div class ="input-container">
+       <input type="text" id="inputType" name="inputType" placeholder="type"/>
+      </div>
+
+       <div class ="input-container">
+       <input type="date" id="inputDate" name="inputDate" placeholder="date"/>
+      </div>
+
+
+      <input id="btnCAddOperation" class="btnCAddOperation" type="submit" value="addOperation" />
+    </div>
+    <div id="div" class=""></div>
+    </form>
+
+            {{!-- ---- ----- Ajax Scripts ----- --- --}}
+<script>
+
+
+const divPost = document.createElement("div");
+const concept = document.getElementById('inputConcept').value;
+const amount = document.getElementById('inputAmount').value;
+const type = document.getElementById('inputType').value;
+const date = document.getElementById('inputDate').value;
+
+
+function btnCAddOperation ( concept, amount, type, date) {
+  const xhr = new XMLHttpRequest();
+  xhr.addEventListener('load', () => {
+    let response = JSON.parse(xhr.responseText);
+
+    if(response.rechazo) {
+      alert(response.rechazo);
+    } else {
+  //const data = document.getElementById('data').value;
+  const divPost = document.createElement("div");
+  const concept = document.createElement("td")
+  const amount = document.createElement("td");
+  const type = document.createElement("td");
+  const date = document.createElement("td");
+
+  concept.textContent = response.concept;
+  amount.textContent = response.amount;
+  type.textContent = response.type;
+  date.textContent = response.date;
+
+  divPost.appendChild(concept);
+  divPost.appendChild(amount);
+  divPost.appendChild(type);
+  divPost.appendChild(date);
+
+  divPost.classList.add('div');
+    };
+    })
+  xhr.open("POST", `/registOperation`);
+  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  xhr.send(JSON.stringify({ id: concept, amount, type, date}));
+}
+
+</script>
