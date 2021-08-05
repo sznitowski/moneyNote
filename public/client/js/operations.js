@@ -4,7 +4,7 @@ const concept = document.getElementById("inputConcept")
 const div = document.getElementById("divOperation");
 const btnCreateOperation = document.getElementById("btnCreateOperation");
 
-function btnCreateOperation (idOperation, concept, amount, type)  {
+function btnCreateOperation (idOperation)  {
   const xhr = new XMLHttpRequest();
   xhr.addEventListener("load", () => {
   let response = JSON.parse(xhr.responseText);  

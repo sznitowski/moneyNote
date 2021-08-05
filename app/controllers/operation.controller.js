@@ -23,7 +23,7 @@ exports.create = (req, res) => {
   // Save Operation in the database
   Operation.create(operation)
     .then(data => {
-      res.send({ data, concept, amount, type, idOperation });
+      res.send({ data });
     })
     .catch(err => {
       res.status(500).send({
