@@ -1,8 +1,8 @@
 module.exports = (sequelize, Sequelize) => {
   const Operation = sequelize.define("operation", {
     id: {
-      type: Sequelize.INTEGER,
-      defaultValue: Sequelize.SERIAL,
+      type: Sequelize.UUID,
+      defaultValue: Sequelize.UUIDV1,
       primaryKey: true
     },
     concept: {

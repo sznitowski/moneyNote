@@ -4,7 +4,7 @@ const Op = db.Sequelize.Op;
 
 // Create and Save a new Operation
 exports.create = (req, res) => {
-  // Validate request
+  // Validate requestED
   if (!req.body.concept) {
     res.status(400).send({
       message: "Content can not be empty!"
@@ -16,13 +16,14 @@ exports.create = (req, res) => {
   const operation = {
     concept: req.body.concept,
     amount: req.body.amount,
-    type: req.body.type
+    type: req.body.type,
+    idOperation : req.body.id,
   };
 
   // Save Operation in the database
   Operation.create(operation)
     .then(data => {
-      res.send(data);
+      res.send({ data, concept, amount, type, idOperation });
     })
     .catch(err => {
       res.status(500).send({

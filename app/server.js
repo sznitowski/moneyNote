@@ -22,9 +22,9 @@ app.use(cors(corsOptions));
 
 // Static
 app.use(express.static(path.join(__dirname, "public")));
+
 // Middleware
-//app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
 
@@ -40,13 +40,13 @@ app.engine(
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views"));
 
-
 //Routes
  app.get("/", (req, res) => {
-  res.render("balance", {
+  res.render("operations", {
   });
 }); 
 require("./routes/operation.routes")(app);
+
 
 
 // Set port, listen for requests

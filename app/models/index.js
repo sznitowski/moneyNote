@@ -1,7 +1,7 @@
 const dbConfig = require("../config/db.config");
 
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
+const sequelize = new Sequelize('postgres://postgres:admin1@localhost:3210/balances', {
   //use_env_variable: process.env.DATABASE_URL,
   host: dbConfig.HOST,
   dialect: dbConfig.dialect,

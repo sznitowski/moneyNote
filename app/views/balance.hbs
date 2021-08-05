@@ -17,7 +17,7 @@ style="width: 400px;"/>
       </tr>
      </thead>
     <tbody>
-   {{#each users}}
+   {{#each operation}}
 	    <td> {{this.concept}} </td>
 	    <td> {{this.amount}} </td>
       <td> {{this.type}} </td>
@@ -39,7 +39,7 @@ style="width: 400px;"/>
   let idToBeDeleted = "";
   btnFindOperation.addEventListener("click", function () {
     inputOperation.value
-    window.location.href = `/api/operations?balance=${inputOperation.value}`
+    window.location.href = `/api/operations?list=${inputOperation.value}`
   });
   
   function createOperation() {
