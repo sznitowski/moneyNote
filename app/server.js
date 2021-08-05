@@ -49,8 +49,8 @@ require("./routes/operation.routes")(app);
 
 
 // user routes
-require('./app/routes/auth.routes')(app);
-require('./app/routes/user.routes')(app);
+require('.routes/auth.routes')(app);
+require('.routes/user.routes')(app);
 
 
 
