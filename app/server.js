@@ -40,12 +40,17 @@ app.engine(
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views"));
 
-//Routes
+//operation routes
  app.get("/", (req, res) => {
   res.render("operations", {
   });
 }); 
 require("./routes/operation.routes")(app);
+
+
+// user routes
+require('./app/routes/auth.routes')(app);
+require('./app/routes/user.routes')(app);
 
 
 
