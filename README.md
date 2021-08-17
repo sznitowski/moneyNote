@@ -32,6 +32,8 @@ These instructions will get you a copy of the project up and running on your loc
 <ul>npm i pg</ul>
 <ul>npm i pg-hstore</ul>
 <ul>npm i sequelize</ul>
-<ul>npm i jsonwebtoken</ul>
-<ul>npm i bcryptjs</ul>
 </li>
+
+
+###
+
