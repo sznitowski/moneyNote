@@ -1,5 +1,4 @@
 const express = require("express");
-const expHbs = require("express-handlebars");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const path = require("path");
@@ -28,17 +27,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
 
-// Handlebars
-app.engine(
-  "hbs",
-  expHbs({
-    defaultLayout: "main.hbs",
-    layoutsDir: "views/layouts",
-    partialsDir: "views/partials",
-  })
-);
-app.set("view engine", "hbs");
-app.set("views", path.join(__dirname, "views"));
 
 //operation routes
  app.get("/", (req, res) => {
