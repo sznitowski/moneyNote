@@ -7,7 +7,7 @@ const InputConcept = () => {
   return (
   <div className="App-input__group">
     <label htmlFor="concept">Concept</label>
-    <input type="text" value={concept} onChange={e => setConcept(e.target.value)} placeholder="Ej. Supermercado"></input>
+    <input type="text" value={concept} onChange={e => setConcept(e.target.value)} placeholder="Example: Donations"></input>
   </div>
   );
 }
