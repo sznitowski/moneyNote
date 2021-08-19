@@ -12,7 +12,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.INTEGER
     },
     type: {
-      type: Sequelize.STRING
+      type: Sequelize.ENUM('income', 'expense')
     },
     date: {
       type: Sequelize.DATEONLY,

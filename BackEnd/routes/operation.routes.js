@@ -12,6 +12,12 @@ module.exports = app => {
   // Retrieve a single Operation with id
   router.get("/:id", operations.findOne);
 
+  // Retrieve all published Operations
+  router.get("/income", operations.findAllIncomes);
+
+  // Retrieve all published Operations
+  router.get("/expenses", operations.findAllExpenses);
+
   // Update a Operation with id
   router.put("/:id", operations.update);
 

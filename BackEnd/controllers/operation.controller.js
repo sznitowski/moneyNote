@@ -4,7 +4,7 @@ const Op = db.Sequelize.Op;
 
 // Create and Save a new Operation
 exports.create = (req, res) => {
-  // Validate requestED
+  // Validate request
   if (!req.body.concept) {
     res.status(400).send({
       message: "Content can not be empty!"
@@ -16,14 +16,13 @@ exports.create = (req, res) => {
   const operation = {
     concept: req.body.concept,
     amount: req.body.amount,
-    type: req.body.type,
-    idOperation : req.body.id,
+    type: req.body.type ? req.body.type : false
   };
 
   // Save Operation in the database
   Operation.create(operation)
     .then(data => {
-      res.send({ data });
+      res.send(data);
     })
     .catch(err => {
       res.status(500).send({
@@ -36,8 +35,8 @@ exports.create = (req, res) => {
 // Retrieve all Operations from the database.
 exports.findAll = (req, res) => {
   const concept = req.query.concept;
-  const condition = concept ? { concept: { [Op.like]: `%${concept}%` } } : null;
-    //const condition = concept
+  var condition = concept ? { concept: { [Op.like]: `%${concept}%` } } : null;
+
   Operation.findAll({ where: condition })
     .then(data => {
       res.send(data);
@@ -128,6 +127,34 @@ exports.deleteAll = (req, res) => {
       res.status(500).send({
         message:
           err.message || "Some error occurred while removing all Operations."
+      });
+    });
+};
+
+// Find all income Operations
+exports.findAllIncomes = (req, res) => {
+  Operation.findAll({ where: { "operation": "income" } })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving Operations."
+      });
+    });
+};
+
+// Find all expense Operations
+exports.findAllExpenses = (req, res) => {
+  Operation.findAll({ where: { "operation": "expense" } })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving Operations."
       });
     });
 };
