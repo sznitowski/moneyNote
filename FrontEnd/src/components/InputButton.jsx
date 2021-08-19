@@ -7,7 +7,7 @@ const InputButton = () => {
 
   return (
   <div className="App-input__group">
-    <button className="btn-add" onClick={ HandleSubmit }>Add</button>
+    <button className="btn-add btn-success w-100 mt-3" onClick={ HandleSubmit }>Add</button>
   </div>
   );
 }

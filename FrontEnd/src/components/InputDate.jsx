@@ -7,7 +7,7 @@ const InputDate = () => {
   return (
   <div className="App-input__group">
     <label htmlFor="date">Date</label>
-    <input type="date" value={date} onChange={e => setDate(e.target.value)}></input>
+    <input className="form-control" type="date" value={date} onChange={e => setDate(e.target.value)}></input>
   </div>
   );
 }

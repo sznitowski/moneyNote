@@ -7,15 +7,15 @@ const HistoryIncome = () => {
 
   return (
   <div className="App-history__income">
-    <h3 className="App-history__income--title">Entry</h3>
+    <h5 className="App-history__income--title">Entry</h5>
     {/* Display all income operations */}
     {incomesArray.map(operation => (
       <div className="App-history__income-item" key={ operation.id }>
         <p className="App-history__income-item--date">{ operation.date }</p>
         <p className="App-history__income-item--amount">${ operation.amount }</p>
         <p className="App-history__income-item--concept">{ operation.concept }</p>
-        <button className="btn-update" onClick={() => HandleUpdate(operations, operation)}>Udapte</button>
-        <button className="btn-delete" onClick={() => HandleDelete(operations, operation.id)}>Delete</button>
+        <button className="btn-update btn-info w-50" onClick={() => HandleUpdate(operations, operation)}>Udapte</button>
+        <button className="btn-delete btn-danger w-50" onClick={() => HandleDelete(operations, operation.id)}>Delete</button>
       </div>
     ))}
   </div>

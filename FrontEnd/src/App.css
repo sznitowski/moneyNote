@@ -1,15 +1,39 @@
-.list {
-  text-align: left;
-  max-width: 750px;
-  margin: auto;
+body{
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.submit-form {
+.App-header{
+  font-size: 24px;
+  text-align: center;
+}
+.App-header__total-expense{
   max-width: 300px;
   margin: auto;
 }
+.App-header__total-expense--title{
+  max-width: 300px;
+  margin: auto;
+ 
+}
+.App-header__total-expense--value{
+  max-width: 300px;
+  margin: auto;
 
-.edit-form {
+}
+.App-history__expense{
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.App-history__income{
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.App-input__group {
   max-width: 300px;
   margin: auto;
 }

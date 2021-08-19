@@ -8,7 +8,7 @@ const InputAmount = () => {
   return (
   <div className="App-input__group">
     <label htmlFor="amount">Amount</label>
-    <input type="number" value={amount} onChange={e => setAmount(e.target.value)} ></input>
+    <input className="form-control" type="number" value={amount} onChange={e => setAmount(e.target.value)} ></input>
   </div>
   );
 }

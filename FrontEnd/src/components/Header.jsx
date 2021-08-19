@@ -24,11 +24,11 @@ const Header = () => {
   return (
     <div className="App-header">
       {/* Current Balance */}
-      <HeaderBalanceItem title="Balance actual:" value={currentBalance}/>
+      <HeaderBalanceItem title="Balance:" value={currentBalance}/>
       {/* Total income */}
-      <HeaderIncomeItem title="Ingresos:" value={totalIncome}/>
+      <HeaderIncomeItem title="Entry:" value={totalIncome}/>
       {/* Total expense */}
-      <HeaderExpenseItem title="Egresos:" value={totalExpense}/>
+      <HeaderExpenseItem title="Exit:" value={totalExpense}/>
     </div>
   );
 }
