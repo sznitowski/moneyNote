@@ -9,8 +9,9 @@ function App() {
   return (
     <div className="App">
       <OperationContextProvider>
+      <Inputs />
         <Header />
-        <Inputs />
+        
         <History />
       </OperationContextProvider>
     </div>

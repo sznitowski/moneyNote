@@ -19,6 +19,7 @@ const Header = () => {
   // Without this, deleted items in the client would still be stored into the server
   useEffect(() => {
     RetrieveOperations();
+    // eslint-disable-next-line
   }, []);
 
   return (
