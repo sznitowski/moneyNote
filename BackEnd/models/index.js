@@ -5,7 +5,7 @@ const sequelize = new Sequelize('postgres://postgres:admin1@localhost:3210/balan
   //use_env_variable: process.env.DATABASE_URL,
   host: dbConfig.HOST,
   dialect: dbConfig.dialect,
-  //operatorsAliases: 0,
+  //operatorsAliases: false,
 
   pool: {
     max: dbConfig.pool.max,
