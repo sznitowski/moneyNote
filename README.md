@@ -1,6 +1,6 @@
 <img align='right' src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="230"> Welcome to Alkemy labs Javascript Full Stack proyect + React 👋
 <hr>
-### Download file, open app folder, in Terminal:
+ <h5>Download file, open app folder, in Terminal:</h5>
 <ol>
   
 <ul> 
@@ -8,7 +8,7 @@
 <li>npm package</li>
 <li>npm install</li>
 </ul>
-### Open in console:
+<h5>Open in console:</h5>
 <ul> 
 <li>cd BackEnd</li>
 <li>node .\server.js</li>
@@ -29,7 +29,7 @@
 <li>connect table: SELECT * FROM operations;</li>
 </ul>
 
-### Open in other console:
+<h5>Open in other console:</h5>
 
 <ul> 
 <li>cd FrontEnd</li>
