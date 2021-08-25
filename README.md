@@ -1,10 +1,8 @@
 <img align='right' src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="230"> Welcome to Alkemy labs Javascript Full Stack proyect + React 👋
 <hr>
-
-<hr>
-```
 ### Download file, open app folder, in Terminal:
 <ol>
+  
 <ul> 
 <li>git clone https://github.com/sznitowski/moneyNote.git</li>
 <li>npm package</li>
@@ -39,6 +37,4 @@
 </ul>
 </ol>
 
-
-```
 <hr>
