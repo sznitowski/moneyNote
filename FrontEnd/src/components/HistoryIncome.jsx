@@ -1,53 +1,54 @@
-  
 import { useContext } from "react";
 import OperationContext from "../context/OperationContext";
 
 const HistoryIncome = () => {
-  const { operations, incomesArray, HandleUpdate, HandleDelete } = useContext(OperationContext);
+  const { operations, incomesArray, HandleUpdate, HandleDelete } =
+    useContext(OperationContext);
 
   return (
-  <div className="App-history__income">
-    <h5 className="App-history__income--title text-success">Income history</h5>
+    <div className="main-container-income">
+      <h5 className="App-history__income--title text-success">
+        INCOME HISTORY
+      </h5>
 
-    <table className="table table-success table-sm">  
-        <tbody>
-        <tr> 
-        <th scope="col">Date</th>
-        <th scope="col">Amount</th>
-        <th scope="col">Type</th>
-        </tr>
-        </tbody>
-        </table>
-
-    {/* Display all income operations */}
-    {incomesArray.map(operation => (
-
-      
-
-      <div className="App-history__income-item" key={ operation.id }>
-
-
-        <table className="table table-success table-sm">
-          
-        <tbody>
-         <tr> 
-          
-
-        <td className="App-history__income-item--date">{ operation.date }</td>
-        <td className="App-history__income-item--amount">${ operation.amount }</td>
-        <td className="App-history__income-item--concept">{ operation.concept }</td>
-
-        </tr>
-        </tbody>
-        </table>
-        <div className="container gap-2 d-md-block">
-        <button className="btn-update btn-light btn-light btn-outline-info w-50" onClick={() => HandleUpdate(operations, operation)}>Udapte</button>
-        <button className="btn-delete btn-light btn-outline-danger w-50" onClick={() => HandleDelete(operations, operation.id)}>Delete</button>
+      <div className="container-income-title">
+        <div className="row">
+          <div className="col">DATE</div>
+          <div className="col">AMOUNT</div>
+          <div className="col">CONCEPT</div>
+          <div className="col">ACTION</div>
+        </div>
       </div>
-      </div>
-    ))}
-  </div>
+
+      {/* Display all income operations */}
+      {incomesArray.map((operation) => (
+        <div className="App-history__income-item" key={operation.id}>
+          <div className="container-operations">
+            <div className="row">
+              <div className="col">{operation.date}</div>
+              <div className="col">${operation.amount}</div>
+              <div className="col">{operation.concept}</div>
+            </div>
+
+            <div className="d-grid">
+              <button
+                className="btn-update btn-info btn-outline-light"
+                onClick={() => HandleUpdate(operations, operation)}
+              >
+                Udapte
+              </button>
+              <button
+                className="btn-delete btn-danger btn-outline-light"
+                onClick={() => HandleDelete(operations, operation.id)}
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
   );
-}
+};
 
 export default HistoryIncome;

@@ -1,5 +1,5 @@
 :root {
-  --primary-color:#3373eb;
+  --primary-color: #3373eb;
   --lighter-color: #f3f3f3;
   --light-color: #adadad;
 }
@@ -11,48 +11,52 @@
 }
 
 html {
-  font-size: calc(12px + (22 - 18) * ((100vw - 320px) / (1600 - 300))) !important;
+  font-size: calc(
+    12px + (22 - 18) * ((100vw - 320px) / (1600 - 300))
+  ) !important;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Lato', sans-serif;
-  font-size: 1.5rem;
-  background-color:rgb(230, 234, 248);
+  text-align: center;
+  padding: 100px;
+  width: 100vw;
+  overflow-x: hidden;
 }
+h5 {
+  font-weight: 600;
+}
+
+/**/
 .App-header {
   grid-column: 5/7;
   grid-row: 1/2;
-
   flex-direction: column;
-
   background: var(--lighter-color);
   color: var(--darker-color);
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
 }
+
 .App-header__current-balance {
   margin: 1rem 0;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .App-header__current-balance--value {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 /*  entry  */
-.App-header__total-income{
+.App-header__total-income {
   display: flex;
   justify-content: flex-start;
   width: 100%;
   margin-bottom: 1rem;
   padding: 0 2rem;
 }
-/*  exit  */
-.App-history__expense--title{
-  display: flex;
-  justify-content: flex-end
-}
+
+/*  titles  */
 .App-header__total-expense {
   display: flex;
   justify-content: flex-end;
@@ -60,69 +64,103 @@ body {
   margin-bottom: 1rem;
   padding: 0 2rem;
 }
-
-.App-history__income-item,
-.App-history__expense-item {
-  display:grid;
-  width: 100%;
-  margin-bottom: .7rem;
+/* main container */
+.main-container-income {
+  display: table-cell;
+  padding: 1px;
+  font-family: "Lato", sans-serif;
+  background-color: rgb(230, 234, 248);
 }
-.App-input {
-  text-align: center;
-  color: white;
-  grid-column: 1/11;
-  grid-row: 2/3;
-  align-items: flex-end;
-  padding: 1rem 0;
-  background: var(--primary-color);
+.main-container-expense {
+  display: table-cell;
+  padding: 1px;
+  font-family: "Lato", sans-serif;
+  background-color: rgb(230, 234, 248);
 }
 
-
-  .App-input {
-  grid-column: 1/11;
-  grid-row: 2/3;
-  align-items: flex-end;
-  padding: 1rem 0;
+.container-expense-title {
+  color: #e2b842;
+  background: #012b39;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  justify-content: space-between;
+  text-align: justify;
 }
-
-.App-input__group {
+.container-income-title {
+  color: #e2b842;
+  background: #012b39;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  justify-content: space-between;
+  text-align: justify;
+}
+.container-operations {
   display: flex;
-  flex-direction: column;
-  margin: 0 2rem;
-}  
+  color: white;
+  background: #012b39;
+  font-weight: 600;
+  justify-content: space-evenly;
+  text-align: justify;
+  height: 60px;
+  margin-top: 1px;
 
-table {
+  padding: 0.5rem 0rem;
+}
+
+.container-fluid {
+  justify-content: center;
   display: grid;
-  border-collapse: collapse;
-  border: 2px solid #e2e2e2;
-  border-radius: 4px;
-  min-width: 100%;
-  grid-template-columns: 
-    minmax(400px, 1fr)
-}
-
-thead,
-tbody,
-tr {
-  display:contents;
-  text-align: center;
-}
-
-th,
-td {
-  margin-bottom: -10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  width: 100%;
+  outline: none;
+  box-sizing: border-box;
 }
 
 .App-header,
 .App-input,
 .App-history {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-
   height: 100%;
 }
 
+label {
+  margin-bottom: 3px;
+}
+
+input {
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+.btn-add {
+  border-radius: 100%;
+  width: 50px;
+}
+button {
+  width: 50px;
+  font-weight: 700;
+}
+
+.App-input {
+  width: auto;
+  text-align: center;
+  color: white;
+  padding: 1rem 0;
+  background: var(--primary-color);
+}
+
+.App-input__group {
+  padding: 10px;
+  display: inline-block;
+  width: auto;
+
+  flex-direction: column;
+  margin: auto;
+}
