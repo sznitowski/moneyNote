@@ -21,14 +21,14 @@ After creating some new Operations, you can check PostgreSQL table:
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
-<li>
-<ul>npm i express</ul>
-<ul>npm i express-handlebars</ul>
-<ul>npm i body-parser</ul>
-<ul>npm i cors</ul>
-<ul>npm i pg</ul>
-<ul>npm i pg-hstore</ul>
-<ul>npm i sequelize</ul>
-</li>
+<ul>
+<li>npm i express</ul>
+<li>npm i express-handlebars</ul>
+<li>npm i body-parser</ul>
+<li>npm i cors</ul>
+<li>npm i pg</ul>
+<li>npm i pg-hstore</ul>
+<li>npm i sequelize</ul>
+</ul>
 
 
