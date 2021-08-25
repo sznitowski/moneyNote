@@ -4,8 +4,11 @@
   "description": "Alkemy labs challenge Node js",
   "main": "server.js",
   "scripts": {
+    "FrontEnd": "npm start --prefix FrontEnd",
+    "build": "babel src --out-dir dist",
     "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "dev": "concurrently \"npm run start\" \"npm run front\""
   },
   "repository": {
     "type": "git",
