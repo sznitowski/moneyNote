@@ -1,7 +1,7 @@
 {
   "name": "moneynote",
   "version": "1.0.0",
-  "description": "Alkemy labs challenge Node js.",
+  "description": "Alkemy labs challenge Node js",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
