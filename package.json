@@ -2,6 +2,10 @@
   "name": "moneynote",
   "version": "1.0.0",
   "description": "Alkemy labs challenge Node js",
+  "engines": {
+    "node": "14.16.0",
+    "npm": "6.14.11"
+  },
   "main": "server.js",
   "scripts": {
     "FrontEnd": "npm start --prefix FrontEnd",
