@@ -1,4 +1,4 @@
-<img align='right' src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="230"> Welcome to Alkemy labs Javascript Full Stack proyect + React 👋
+<img src="https://camo.githubusercontent.com/3b7c592ede97b6138ffd4b1cc1541c2f3b11fd39/687474703a2f2f33312e6d656469612e74756d626c722e636f6d2f31376665613932306666333665663466356238373764353231366137616164392f74756d626c725f6d6f39786a65387a5a34317163626975666f315f313238302e676966" height="350px" width ="350px"> Welcome to Alkemy labs Javascript Full Stack proyect + React 👋
 <hr>
 
 #### In this project, we can make cash income and expenditure operations, and they will be registered in our database. We can record in the database: the date, the type of cash inflow or outflow, the concept.
@@ -13,7 +13,7 @@
 
 <hr>
 
-![screen2png](https://user-images.githubusercontent.com/78902757/130870126-a0c6d711-2314-4ea3-ab8f-2f14ce0958be.png)
+![screen1](https://user-images.githubusercontent.com/78902757/131588689-ed3d87ea-e02b-4920-b49b-9d8ba2764545.png)
 
 
 <hr>
@@ -56,6 +56,6 @@
 
 <hr>
 
-![screen1](https://user-images.githubusercontent.com/78902757/130870313-a4947fa8-a033-458f-897a-326cfc248722.png)
+![screen2](https://user-images.githubusercontent.com/78902757/131588698-62f23555-8ad1-4563-9e13-ecd4abacf180.png)
 
 <hr>
