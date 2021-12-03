@@ -9,9 +9,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: calc(
-    12px + (22 - 18) * ((100vw - 320px) / (1600 - 300))
-  ) !important;
+  font-size: calc(12px + (22 - 18) * ((100vw - 320px) / (1600 - 300))) !important;
 }
 body {
   text-align: center;
@@ -53,54 +51,32 @@ h5 {
   margin-bottom: 1rem;
   padding: 0 2rem;
 }
-.main-container-income {
-  width: 100vw;
-  display: table-cell;
-  padding: 1px;
-  font-family: "Lato", sans-serif;
-  background-color: rgb(230, 234, 248);
-}
-.main-container-expense {
-  width: 100vw;
-  display: table-cell;
-  padding: 1px;
-  font-family: "Lato", sans-serif;
-  background-color: rgb(230, 234, 248);
-}
-.container-income-title {
+.container-title {
   color: #e2b842;
   background: #012b39;
   font-size: 0.85em;
   font-weight: 600;
-  padding: 0.5em 0em;
+  padding: 0.5em 1em;
   letter-spacing: 1px;
 }
-.container-expense-title {
-  color: #e2b842;
-  background: #012b39;
-  font-size: 0.85em;
-  font-weight: 600;
-  padding: 0.5em 0em;
-  letter-spacing: 1px;
-}
- .container-operations {
+.container-operations {
   display: grid;
   color: white;
   background: #012b39;
   font-weight: 600;
-  justify-content:baseline;
-  text-align: justify;
+  font-size: 0.80em;
+  text-align: center;
   height: 60px;
   margin-top: 1px;
-  padding: 0.5rem 0rem;
+  padding: auto;
 }
 .container-fluid {
-   justify-content: center;
+  justify-content: center;
   display: grid;
-  width: 100%; 
-   outline: none;
-  box-sizing: border-box; 
-} 
+  width: 100%;
+  outline: none;
+  box-sizing: border-box;
+}
 .App-header,
 .App-input,
 .App-history {
@@ -123,12 +99,12 @@ input {
   border-radius: 100%;
   width: 50px;
 }
- button {
-  display: block;
+button {
+  display: inline-block;
   border: none;
   font-size: 0.8rem;
   font-weight: 600;
-} 
+}
 .App-input {
   width: auto;
   text-align: center;

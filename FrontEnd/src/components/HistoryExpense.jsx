@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Container, Row, Col, Button } from 'reactstrap';
 import OperationContext from "../context/OperationContext";
 
 const HistoryExpense = () => {
@@ -6,48 +7,51 @@ const HistoryExpense = () => {
     useContext(OperationContext);
 
   return (
-    <div className="main-container-expense">
+    <Container className="main-container">
       <h5 className="App-history__expense--title text-danger">
         EXPENSES HISTORY
       </h5>
 
-      <div className="container-expense-title">
-        <div className="row row-cols-4">
-          <div className="col">DATE</div>
-          <div className="col">AMOUNT</div>
-          <div className="col">CONCEPT</div>
-          <div className="col">ACTION</div>
-        </div>
-      </div>
+      <Col className="container-title">
+        <Row className="row row-cols-4">
+          <Col className="col">DATE</Col>
+          <Col className="col">AMOUNT</Col>
+          <Col className="col">CONCEPT</Col>
+          <Col className="col">ACTION</Col>
+        </Row>
+      </Col>
 
       {/* Display all expense operations */}
       {expensesArray.map((operation) => (
-        <div className="App-history__expense-item" key={operation.id}>
-          <div className="container-operations">
-            <div className="row row-cols-4">
-              <div className="col">{operation.date}</div>
-              <div className="col">${operation.amount}</div>
-              <div className="col">{operation.concept}</div>
+        <Container className="" key={operation.id}>
+          <Row className="container-operations">
+            <Row className="row row-cols-4">
+              <Col className="col">{operation.date}</Col>
+              <Col className="col">${operation.amount}</Col>
+              <Col className="col">{operation.concept}</Col>
 
-              <div className="d-grid">
-                <button
-                  className="btn-update btn-info btn-outline-dark"
+              <Container className="d-grid">
+              <Button
+                  className="btn-update btn-sm"
+                  color="info"
+                  outline
                   onClick={() => HandleUpdate(operations, operation)}
                 >
                   Udapte
-                </button>
-                <button
-                  className="btn-delete btn-danger btn-outline-dark"
+                </Button>
+                <Button
+                  className="btn-delete btn-sm"
+                  color="danger"
                   onClick={() => HandleDelete(operations, operation.id)}
                 >
                   Delete
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+                </Button>
+              </Container>
+            </Row>
+          </Row>
+        </Container>
       ))}
-    </div>
+    </Container>
   );
 };
 
